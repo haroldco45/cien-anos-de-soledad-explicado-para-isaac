@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cien años de soledad, explicado para Isaac</title>
+<meta name="description" content="Lecciones cortas, árbol de los Buendía y quiz para entender Cien años de soledad. Vibras Positivas HM.">
+<meta name="theme-color" content="#EB0A1E">
+<link rel="canonical" href="https://haroldco45.github.io/cien-anos-isaac/">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Vibras Positivas HM">
+<meta property="og:title" content="Cien años de soledad, explicado para Isaac">
+<meta property="og:description" content="8 lecciones cortas, el árbol de los Buendía y un quiz de 12 preguntas para entender el libro de Gabo.">
+<meta property="og:url" content="https://haroldco45.github.io/cien-anos-isaac/">
+<meta property="og:image" content="https://haroldco45.github.io/cien-anos-isaac/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cien años de soledad, explicado paso a paso para Isaac">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cien años de soledad, explicado para Isaac">
+<meta name="twitter:description" content="8 lecciones, el árbol de los Buendía y un quiz.">
+<meta name="twitter:image" content="https://haroldco45.github.io/cien-anos-isaac/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --ink:#000000; --red:#EB0A1E; --soft:#F3F3F3; --line:#E3E3E3; --muted:#5C5C5C; --on-red:#FFFFFF;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#000000; --ink:#FFFFFF; --soft:#161616; --line:#2C2C2C; --muted:#A9A9A9; }
+}
+:root[data-theme="dark"]{ --bg:#000000; --ink:#FFFFFF; --soft:#161616; --line:#2C2C2C; --muted:#A9A9A9; }
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 "Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;font-weight:800;line-height:1.02;margin:0;letter-spacing:-.01em}
+p{margin:0 0 .8em}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px;border-radius:6px}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+
+/* Barra superior */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:12px;height:58px}
+.brand{font:700 15px/1 "Barlow",sans-serif;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand b{color:var(--red)}
+.meter{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+.meter .track{width:80px;height:8px;border-radius:99px;background:var(--soft);overflow:hidden}
+.meter .fill{height:100%;width:0;background:var(--red);border-radius:99px;transition:width .4s}
+
+/* Portada */
+.hero{padding:34px 0 26px}
+.hero h1{font-size:clamp(54px,15vw,112px);text-transform:none}
+.hero h1 span{display:block}
+.hero .for{margin-top:14px;font-size:19px;font-weight:600}
+.opening{margin-top:22px;padding:18px 20px;border-radius:18px;background:var(--ink);color:var(--bg)}
+.opening p{margin:0;font-size:17px}
+.opening small{display:block;margin-top:8px;opacity:.7;font-size:14px}
+
+section.view{display:none;padding-bottom:120px}
+section.view.on{display:block}
+.view > .wrap > h2{font-size:40px;margin:26px 0 6px}
+.lead{color:var(--muted);margin-bottom:20px;max-width:62ch}
+
+/* Lecciones */
+.lessons{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.lesson{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:14px;width:100%;text-align:left;background:var(--soft);border:0;border-radius:18px;padding:14px 16px}
+.lesson .n{font:800 34px/1 "Barlow Condensed",sans-serif;color:var(--muted)}
+.lesson strong{display:block;font-size:18px;line-height:1.25}
+.lesson em{font-style:normal;color:var(--muted);font-size:15px}
+.lesson .ok{width:28px;height:28px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:15px;color:transparent}
+.lesson.done .n{color:var(--red)}
+.lesson.done .ok{background:var(--red);border-color:var(--red);color:var(--on-red)}
+.tips{margin-top:26px;border:2px solid var(--ink);border-radius:20px;padding:18px 20px}
+.tips h3{font-size:26px;margin-bottom:8px}
+.tips ul{margin:0;padding-left:20px}
+.tips li{margin-bottom:6px}
+
+/* Árbol */
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-bottom:18px;font-size:15px}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.sw{width:18px;height:18px;border-radius:6px;display:inline-block}
+.sw.a{background:var(--red)} .sw.j{background:var(--ink)} .sw.o{border:2px solid var(--ink)}
+.gen{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.gen .g{font:800 30px/1 "Barlow Condensed",sans-serif;color:var(--red);padding-top:4px}
+.gen .g small{display:block;font:500 12px/1.2 "Barlow",sans-serif;color:var(--muted);margin-top:2px}
+.people{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--ink);background:transparent;border-radius:99px;padding:8px 15px;font-weight:600;font-size:15px;line-height:1.2}
+.chip.a{background:var(--red);border-color:var(--red);color:var(--on-red)}
+.chip.j{background:var(--ink);color:var(--bg)}
+.chip.x{border-style:dashed;color:var(--muted);border-color:var(--muted)}
+.trick{margin-top:22px;background:var(--soft);border-radius:20px;padding:18px 20px}
+.trick h3{font-size:26px;margin-bottom:8px}
+.others h3{font-size:26px;margin:28px 0 10px}
+
+/* Magia y realidad */
+.pairs{display:grid;gap:12px}
+.pair{display:grid;grid-template-columns:1fr 1fr;border-radius:20px;overflow:hidden;border:2px solid var(--ink)}
+.pair > div{padding:14px 16px}
+.pair .m{background:var(--ink);color:var(--bg)}
+.pair h4{margin:0 0 4px;font:700 13px/1.2 "Barlow",sans-serif;opacity:.75}
+.pair p{margin:0;font-size:16px}
+@media (max-width:480px){.pair{grid-template-columns:1fr}}
+
+/* Quiz */
+.qcard{background:var(--soft);border-radius:22px;padding:20px}
+.qtop{display:flex;justify-content:space-between;color:var(--muted);font-size:15px;margin-bottom:10px}
+.qcard h3{font-size:30px;margin-bottom:16px}
+.opts{display:grid;gap:9px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--bg);border-radius:16px;padding:13px 16px;font-weight:500}
+.opt.right{border-color:var(--red);background:var(--red);color:var(--on-red)}
+.opt.wrong{border-color:var(--ink);text-decoration:line-through;opacity:.6}
+.expl{margin-top:14px;font-size:16px}
+.expl b{color:var(--red)}
+.btn{display:inline-block;border:0;border-radius:99px;padding:13px 26px;font-weight:700;font-size:16px;background:var(--red);color:var(--on-red)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.score{font:800 clamp(70px,22vw,130px)/1 "Barlow Condensed",sans-serif;color:var(--red)}
+
+/* Hoja de detalle */
+dialog{border:0;padding:0;margin:auto auto 0;width:100%;max-width:760px;max-height:88vh;max-height:88dvh;border-radius:26px 26px 0 0;background:var(--bg);color:var(--ink)}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+.sheet{padding:22px 22px calc(26px + env(safe-area-inset-bottom,0px));overflow:auto;max-height:88vh;max-height:88dvh}
+.sheet .grab{width:44px;height:5px;border-radius:9px;background:var(--line);margin:0 auto 16px}
+.sheet h2{font-size:38px;margin-bottom:6px}
+.sheet .sub{color:var(--red);font-weight:700;margin-bottom:14px}
+.think{margin-top:16px;border-left:4px solid var(--red);padding:4px 0 4px 14px}
+.think b{display:block;margin-bottom:2px}
+@media (min-width:780px){dialog{margin:auto;border-radius:26px}}
+@media (prefers-reduced-motion:no-preference){dialog[open]{animation:up .28s ease-out}@keyframes up{from{transform:translateY(40px);opacity:0}}}
+
+/* Navegación inferior */
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bg);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+nav.tabs .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding-top:8px;padding-bottom:8px}
+.tab{border:0;background:transparent;border-radius:99px;padding:10px 4px;font-weight:700;font-size:14px;color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+footer{color:var(--muted);font-size:14px;padding:30px 0 10px}
+footer b{color:var(--red)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><b>Vibras Positivas HM</b> &nbsp;para Isaac</div>
+    <div class="meter" aria-label="Progreso de Isaac"><div class="track"><div class="fill" id="fill"></div></div><span id="pct">0%</span></div>
+  </div>
+</header>
+
+<main>
+  <!-- LECCIONES -->
+  <section class="view on" id="v-lecciones" aria-label="Lecciones">
+    <div class="wrap">
+      <div class="hero">
+        <h1><span>Cien años</span><span>de soledad</span></h1>
+        <p class="for">El libro de Gabo, explicado paso a paso para Isaac.</p>
+        <div class="opening">
+          <p>La novela arranca con un coronel parado frente a un pelotón de fusilamiento. En ese segundo, lo que se le viene a la mente es la tarde lejana en que su papá lo llevó a conocer el hielo.</p>
+          <small>Así empieza todo: con un recuerdo. Y el libro entero es la memoria de una familia.</small>
+        </div>
+      </div>
+      <h2>Lecciones</h2>
+      <p class="lead">Ocho lecciones cortas, en orden. Toca una para leerla y márcala cuando la entiendas.</p>
+      <ul class="lessons" id="lessons"></ul>
+      <div class="tips">
+        <h3>Cómo leer el libro sin perderse</h3>
+        <ul>
+          <li>Los nombres se repiten a propósito. Ten abierta la pestaña Familia mientras lees.</li>
+          <li>No te asustes cuando pasa algo imposible: el narrador lo cuenta con la misma calma con que cuenta lo normal. Ese es el chiste.</li>
+          <li>Lee un capítulo por sesión. Son 20 capítulos sin título.</li>
+          <li>Si un pedazo te gusta, léelo en voz alta. Gabo escribía para el oído.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAMILIA -->
+  <section class="view" id="v-familia" aria-label="Familia">
+    <div class="wrap">
+      <h2>Los Buendía</h2>
+      <p class="lead">Siete generaciones en una sola casa. Toca cualquier nombre para saber quién es.</p>
+      <div class="legend">
+        <span><i class="sw a"></i>Tipo Aureliano</span>
+        <span><i class="sw j"></i>Tipo José Arcadio</span>
+        <span><i class="sw o"></i>Mujeres de la familia</span>
+      </div>
+      <div id="tree"></div>
+      <div class="trick">
+        <h3>El truco de los nombres</h3>
+        <p>Úrsula se da cuenta de un patrón: los que se llaman <b>Aureliano</b> son callados, pensativos y solitarios, y los que se llaman <b>José Arcadio</b> son grandotes, arrebatados y emprendedores.</p>
+        <p style="margin:0">La excepción son los gemelos de la cuarta generación: de niños jugaban a intercambiarse, y Úrsula sospecha que se les cruzaron los nombres. Por eso Aureliano Segundo salió fiestero y José Arcadio Segundo, solitario.</p>
+      </div>
+      <div class="others">
+        <h3>Gente cercana a la casa</h3>
+        <div class="people" id="others"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAGIA Y REALIDAD -->
+  <section class="view" id="v-real" aria-label="Magia y realidad">
+    <div class="wrap">
+      <h2>Magia y realidad</h2>
+      <p class="lead">Lo que parece inventado muchas veces salió de la vida real de Colombia y de la infancia de Gabo. A la izquierda, el libro. A la derecha, de dónde viene.</p>
+      <div class="pairs" id="pairs"></div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="view" id="v-quiz" aria-label="Quiz">
+    <div class="wrap">
+      <h2>Quiz</h2>
+      <p class="lead">Doce preguntas. Tu mejor puntaje queda guardado en este celular.</p>
+      <div id="quiz"></div>
+    </div>
+  </section>
+</main>
+
+<div class="wrap"><footer>Hecho por <b>Vibras Positivas HM</b>, Caucasia, Antioquia. Esta app explica el libro con palabras propias; para leer la novela, consíguela en una biblioteca o librería.</footer></div>
+
+<nav class="tabs" aria-label="Secciones">
+  <div class="wrap" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-v="lecciones">Lecciones</button>
+    <button class="tab" role="tab" aria-selected="false" data-v="familia">Familia</button>
+    <button class="tab" role="tab" aria-selected="false" data-v="real">Magia y realidad</button>
+    <button class="tab" role="tab" aria-selected="false" data-v="quiz">Quiz</button>
+  </div>
+</nav>
+
+<dialog id="sheet" aria-labelledby="sh-title">
+  <div class="sheet">
+    <div class="grab"></div>
+    <h2 id="sh-title"></h2>
+    <div class="sub" id="sh-sub"></div>
+    <div id="sh-body"></div>
+    <div class="row" id="sh-actions"></div>
+  </div>
+</dialog>
+
+<script>
+const LESSONS = [
+ {t:"Quién lo escribió", s:"Gabriel García Márquez, Gabo", b:[
+  "Gabo nació en 1927 en Aracataca, un pueblito del Magdalena. De niño vivió con sus abuelos: el coronel Nicolás Márquez, veterano de las guerras civiles, y doña Tranquilina Iguarán, que contaba cosas increíbles con la cara más seria del mundo.",
+  "Escribió Cien años de soledad en Ciudad de México, encerrado cerca de año y medio, mientras su esposa Mercedes sostenía la casa como podía. Se publicó en 1967 en Buenos Aires y se volvió uno de los libros más leídos en español.",
+  "En 1982 le dieron el Premio Nobel de Literatura. Murió en 2014."],
+  q:"Gabo dijo que aprendió a narrar de su abuela. ¿Quién en tu familia cuenta historias así, como si todo fuera verdad?"},
+ {t:"Macondo, el pueblo inventado", s:"Un lugar que no está en el mapa", b:[
+  "Macondo es un pueblo que se inventó Gabo, pero se parece mucho a Aracataca y a tantos pueblos calurosos del Caribe colombiano: río, polvo, almendros, lluvia, comerciantes que llegan y se van.",
+  "En el libro, Macondo nace como un caserío de veinte casas a la orilla de un río de aguas limpias, crece, se llena de gente y al final desaparece.",
+  "Por eso muchos dicen que Macondo es como un resumen de la historia de América Latina."],
+  q:"Si Caucasia fuera Macondo, ¿qué cosas de aquí aparecerían en el libro?"},
+ {t:"La fundación y el gran miedo", s:"José Arcadio Buendía y Úrsula", b:[
+  "José Arcadio Buendía y Úrsula Iguarán eran primos. En la familia había una leyenda: unos parientes que se casaron entre sí tuvieron un hijo con cola de cerdo. Úrsula vive con ese miedo toda la vida.",
+  "Por una pelea de gallos, José Arcadio Buendía mata a un hombre llamado Prudencio Aguilar, y el fantasma de ese hombre no los deja en paz. Entonces se van con otras familias, cruzan la sierra y fundan Macondo.",
+  "Ese miedo a la cola de cerdo es como una advertencia que atraviesa todo el libro: una familia que se encierra en sí misma termina mal."],
+  q:"¿Por qué crees que una familia que no se abre a los demás se va quedando sola?"},
+ {t:"Los gitanos y Melquíades", s:"Imanes, lupas, hielo y pergaminos", b:[
+  "Cada año llegan gitanos con inventos: imanes que arrastran ollas, lupas que queman, y el hielo, que a la gente le parece un diamante enorme.",
+  "José Arcadio Buendía se obsesiona con la ciencia y se mete a experimentar sin parar. Al final de su vida termina amarrado a un castaño en el patio.",
+  "El gitano Melquíades se hace amigo de la familia y deja unos pergaminos escritos en un idioma raro. Nadie los entiende durante cien años. Guarda ese detalle: al final del libro es clave."],
+  q:"¿Qué invento de hoy le parecería magia a alguien de hace cien años?"},
+ {t:"Las guerras del coronel", s:"Aureliano Buendía, el hijo callado", b:[
+  "Aureliano nació con los ojos abiertos y creció callado. Se vuelve el coronel Aureliano Buendía y promueve 32 levantamientos armados entre liberales y conservadores. Los pierde todos.",
+  "Sobrevive a emboscadas, a atentados y hasta a un fusilamiento. Pero la guerra lo deja vacío: al final se encierra en su taller a hacer pescaditos de oro, los vende, funde el oro y vuelve a empezar.",
+  "Gabo se inspiró en las guerras civiles colombianas del siglo XIX y en la Guerra de los Mil Días, de la que su abuelo fue veterano."],
+  q:"¿Qué significa hacer pescaditos, fundirlos y volver a hacerlos? ¿Para qué sirve hacer algo que no lleva a ninguna parte?"},
+ {t:"La compañía bananera", s:"El progreso que llega en tren", b:[
+  "Llega el tren a Macondo y con él una compañía bananera extranjera. Hay plata, luz eléctrica, cine y gente de todas partes. Pero los trabajadores viven en malas condiciones y hacen una huelga.",
+  "El ejército dispara contra los huelguistas en la estación. José Arcadio Segundo sobrevive y ve un tren larguísimo cargado de muertos. Después, todo el mundo le dice que ahí no pasó nada.",
+  "Esto se basa en un hecho real: la masacre de las bananeras en Ciénaga, Magdalena, en diciembre de 1928. Hasta hoy se discute cuántas personas murieron."],
+  q:"¿Por qué es peligroso que un pueblo olvide lo que le pasó?"},
+ {t:"La lluvia y la decadencia", s:"Cuatro años, once meses y dos días", b:[
+  "Después de la masacre cae un aguacero que dura cuatro años, once meses y dos días. La compañía se va y Macondo queda arruinado.",
+  "La casa de los Buendía se va llenando de hormigas, polvo y maleza. Úrsula, que ya pasa de los cien años y está ciega, sigue manejando la casa de memoria sin que nadie se dé cuenta de que no ve.",
+  "Fíjate cómo Gabo exagera el tiempo y el clima para que sintamos el cansancio de la familia."],
+  q:"Úrsula es el corazón de la casa. ¿Quién es la Úrsula de tu familia?"},
+ {t:"El final y los pergaminos", s:"El círculo se cierra", b:[
+  "En la última generación, Aureliano Babilonia y Amaranta Úrsula se enamoran sin saber que son sobrino y tía. Tienen un hijo que nace con cola de cerdo: el miedo de Úrsula se cumple.",
+  "Aureliano Babilonia por fin logra leer los pergaminos de Melquíades y descubre que ahí estaba escrita, desde hacía cien años, toda la historia de su familia, incluido el momento que está viviendo.",
+  "Mientras lee, un viento arrasa Macondo. La idea final del libro es que una familia o un pueblo condenado a la soledad no tiene una segunda oportunidad."],
+  q:"El libro dice que la soledad destruye a los Buendía. ¿Qué es lo contrario de la soledad para ti?"}
+];
+
+const TREE = [
+ {g:1, p:[["jab","José Arcadio Buendía","j"],["ursula","Úrsula Iguarán","o"]]},
+ {g:2, p:[["ja","José Arcadio","j"],["coronel","Coronel Aureliano Buendía","a"],["amaranta","Amaranta","o"],["rebeca","Rebeca (adoptada)","o"]]},
+ {g:3, p:[["arcadio","Arcadio","j"],["aurelianojose","Aureliano José","a"],["diecisiete","Los 17 Aurelianos","a"]]},
+ {g:4, p:[["remedios","Remedios la Bella","o"],["jas","José Arcadio Segundo","j"],["aus","Aureliano Segundo","a"]]},
+ {g:5, p:[["ja5","José Arcadio","j"],["meme","Meme","o"],["au","Amaranta Úrsula","o"]]},
+ {g:6, p:[["ab","Aureliano Babilonia","a"]]},
+ {g:7, p:[["ultimo","Aureliano, el último","a"]]}
+];
+
+const PEOPLE = {
+ jab:["Generación 1","El fundador. Soñador y curioso, se obsesiona con los inventos de los gitanos y la ciencia. Funda Macondo y termina sus días amarrado a un castaño del patio."],
+ ursula:["Generación 1","La columna de la casa. Trabajadora, firme y práctica. Vive más de cien años, ve pasar casi todas las generaciones y hasta ciega sigue organizando la casa."],
+ ja:["Generación 2, hijo mayor","Enorme y fuerte. Se va con los gitanos, regresa años después lleno de tatuajes y se casa con Rebeca. Muere de un tiro que nadie explica, y un hilo de sangre atraviesa el pueblo hasta llegar a la cocina de Úrsula."],
+ coronel:["Generación 2","Nació con los ojos abiertos. Promueve 32 guerras y las pierde todas. Se vuelve frío y solitario, y termina haciendo pescaditos de oro en su taller."],
+ amaranta:["Generación 2","Orgullosa y llena de rencor, rechaza a todos los que la quieren. Lleva siempre una venda negra en la mano y teje su propia mortaja, sabiendo que cuando termine se va a morir."],
+ rebeca:["Generación 2, hija adoptada","Llega a la casa siendo niña con un costal que contiene los huesos de sus papás. Come tierra cuando está angustiada. Se casa con José Arcadio."],
+ arcadio:["Generación 3, hijo de José Arcadio y Pilar Ternera","Era maestro de escuela, pero cuando le dan el mando del pueblo se vuelve un pequeño tirano. Lo fusilan. Con Santa Sofía de la Piedad tiene a Remedios la Bella y a los gemelos."],
+ aurelianojose:["Generación 3, hijo del coronel y Pilar Ternera","Crece en la casa y se enamora de su tía Amaranta, que lo rechaza. Se va a la guerra y muere joven."],
+ diecisiete:["Generación 3, hijos del coronel","Diecisiete hijos que el coronel tuvo con distintas mujeres durante la guerra. Todos llevan una cruz de ceniza en la frente que nunca se borra, y sus enemigos los persiguen hasta acabar con ellos."],
+ remedios:["Generación 4","La mujer más bella de Macondo, tan inocente que no entiende el efecto que causa. Un día, doblando sábanas en el patio, sube al cielo y desaparece."],
+ jas:["Generación 4, gemelo","Flaco y solitario, aunque se llama José Arcadio. Se mete en la huelga bananera, sobrevive a la masacre y nadie le cree. Se encierra en el cuarto de Melquíades a estudiar los pergaminos."],
+ aus:["Generación 4, gemelo","Grande y fiestero, aunque se llama Aureliano. Se casa con Fernanda del Carpio, pero vive de fiesta con Petra Cotes, y mientras está con ella los animales se multiplican sin parar."],
+ ja5:["Generación 5, hijo de Aureliano Segundo y Fernanda","Su mamá lo manda a Roma para que llegue a ser papa. Vuelve sin haberlo logrado, encuentra un tesoro escondido en la casa y lleva una vida de lujos que termina mal."],
+ meme:["Generación 5, se llama Renata Remedios","Alegre y musical. Se enamora de Mauricio Babilonia, un mecánico al que siempre lo siguen mariposas amarillas. Su mamá no acepta el amor y la encierra en un convento, donde no vuelve a hablar."],
+ au:["Generación 5","Estudia en Bruselas y regresa llena de energía, decidida a rescatar la casa. Se enamora de Aureliano Babilonia sin saber que es su sobrino."],
+ ab:["Generación 6, hijo de Meme y Mauricio Babilonia","Lo crían escondido en la casa. Se vuelve un sabio solitario y es quien por fin descifra los pergaminos de Melquíades."],
+ ultimo:["Generación 7","Hijo de Aureliano Babilonia y Amaranta Úrsula. Nace con cola de cerdo: se cumple el miedo con que empezó la familia."]
+};
+
+const OTHERS = [
+ ["Melquíades","El gitano sabio. Trae inventos, muere y vuelve, y deja los pergaminos donde está escrita la historia de la familia."],
+ ["Pilar Ternera","Lee las cartas y conoce todos los secretos de la casa. Es la mamá de Arcadio y de Aureliano José. Vive casi tanto como Úrsula."],
+ ["Santa Sofía de la Piedad","Esposa de Arcadio y mamá de Remedios la Bella y los gemelos. Callada, trabaja toda la vida en la casa casi sin que la noten."],
+ ["Fernanda del Carpio","Esposa de Aureliano Segundo. Viene de una familia de la ciudad que se cree aristócrata, y llena la casa de reglas y apariencias."],
+ ["Petra Cotes","La compañera de Aureliano Segundo. Con ella vienen la abundancia, las rifas y la fiesta."],
+ ["Mauricio Babilonia","El mecánico de las mariposas amarillas, papá de Aureliano Babilonia."]
+];
+
+const PAIRS = [
+ ["Macondo","Aracataca, Magdalena, donde nació Gabo, y los pueblos bananeros de la región."],
+ ["El coronel Aureliano Buendía","El abuelo de Gabo, coronel liberal, y los caudillos de las guerras civiles, como Rafael Uribe Uribe."],
+ ["Las 32 guerras perdidas","Las guerras civiles del siglo XIX y la Guerra de los Mil Días (1899 a 1902)."],
+ ["La compañía bananera","La United Fruit Company, que manejó el banano en la zona del Magdalena."],
+ ["El tren cargado de muertos","La masacre de las bananeras en Ciénaga, en diciembre de 1928."],
+ ["Úrsula contando lo increíble con naturalidad","La abuela Tranquilina, que contaba cosas fantásticas como si fueran lo más normal."],
+ ["La tarde en que conocen el hielo","Un recuerdo de infancia: el abuelo llevó a Gabo a ver hielo en el comisariato de la bananera."],
+ ["La peste del insomnio, cuando todos olvidan","El miedo real de un pueblo a perder su memoria y su historia."]
+];
+
+const QUIZ = [
+ ["¿Cómo se llama el pueblo de la novela?",["Aracataca","Macondo","Comala","Ciénaga"],1,"Macondo es inventado, aunque se parece mucho a Aracataca, el pueblo de Gabo."],
+ ["¿Quiénes fundan el pueblo?",["El coronel y Remedios","Melquíades y Pilar Ternera","José Arcadio Buendía y Úrsula","Fernanda y Aureliano Segundo"],2,"La pareja de primos sale huyendo del fantasma de Prudencio Aguilar y funda Macondo."],
+ ["¿Cuál es el gran miedo de Úrsula?",["Que se seque el río","Que un hijo nazca con cola de cerdo","Que lleguen los gitanos","Que se quede ciega"],1,"Por la leyenda familiar, teme que entre parientes nazca un hijo con cola de cerdo. Al final se cumple."],
+ ["¿Quién deja los pergaminos con la historia de la familia?",["Melquíades","Úrsula","El coronel","Petra Cotes"],0,"El gitano Melquíades. Los descifra Aureliano Babilonia en la última página."],
+ ["¿Cuántas guerras promueve el coronel Aureliano Buendía?",["7","17","32","100"],2,"Fueron 32 levantamientos armados, y los perdió todos."],
+ ["¿Qué hace el coronel en su taller al final de su vida?",["Relojes","Pescaditos de oro","Guitarras","Mapas"],1,"Los hace, los vende, funde el oro y vuelve a empezar."],
+ ["¿Quién sube al cielo mientras dobla sábanas?",["Amaranta","Meme","Remedios la Bella","Rebeca"],2,"Remedios la Bella desaparece en el aire, y el narrador lo cuenta como si nada."],
+ ["¿Qué sigue siempre a Mauricio Babilonia?",["Un perro negro","Mariposas amarillas","Una nube","Hormigas rojas"],1,"Las mariposas amarillas se volvieron un símbolo de Gabo."],
+ ["¿Qué hecho real inspira la matanza de los huelguistas?",["La masacre de las bananeras, 1928","La Batalla de Boyacá","El Bogotazo","La toma del Palacio de Justicia"],0,"Ocurrió en Ciénaga, Magdalena, en diciembre de 1928."],
+ ["¿Cuánto dura la lluvia sobre Macondo?",["Cuarenta días","Un año","Cuatro años, once meses y dos días","Cien años"],2,"La exageración es parte del estilo: el tiempo se siente eterno."],
+ ["¿Qué hace la gente para no olvidar durante la peste del insomnio?",["Pinta murales","Pone letreros a las cosas con su nombre y uso","Canta todo el día","Se va del pueblo"],1,"Marcan los objetos y los animales con letreros para no olvidar qué son ni para qué sirven."],
+ ["¿En qué año recibió Gabo el Premio Nobel?",["1967","1975","1982","1999"],2,"El libro salió en 1967; el Nobel llegó en 1982."]
+];
+
+/* Guardado en este celular */
+const KEY="cien-anos-isaac-v1";
+let state={done:[],best:0};
+try{const r=localStorage.getItem(KEY); if(r){state=Object.assign(state,JSON.parse(r));}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+
+const $=s=>document.querySelector(s);
+function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));}
+
+function progress(){
+  const total=LESSONS.length+1;
+  const pts=state.done.length+(state.best>=9?1:0);
+  const p=Math.round(pts/total*100);
+  $("#fill").style.width=p+"%"; $("#pct").textContent=p+"%";
+}
+
+function renderLessons(){
+  $("#lessons").innerHTML=LESSONS.map((l,i)=>{
+    const d=state.done.includes(i);
+    return `<li><button class="lesson${d?" done":""}" data-i="${i}"><span class="n">${i+1}</span><span><strong>${esc(l.t)}</strong><em>${esc(l.s)}</em></span><span class="ok" aria-label="${d?"Leída":"Sin leer"}">✓</span></button></li>`;
+  }).join("");
+}
+
+const dlg=$("#sheet");
+function openSheet(title,sub,body,actions){
+  $("#sh-title").textContent=title; $("#sh-sub").textContent=sub;
+  $("#sh-body").innerHTML=body; $("#sh-actions").innerHTML=actions||"";
+  if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open","");
+  dlg.querySelector(".sheet").scrollTop=0;
+}
+function closeSheet(){ if(dlg.close) dlg.close(); else dlg.removeAttribute("open"); }
+dlg.addEventListener("click",e=>{ if(e.target===dlg) closeSheet(); });
+
+function openLesson(i){
+  const l=LESSONS[i], d=state.done.includes(i);
+  const body=l.b.map(p=>`<p>${esc(p)}</p>`).join("")+`<div class="think"><b>Para conversar</b>${esc(l.q)}</div>`;
+  const next=i<LESSONS.length-1?`<button class="btn ghost" data-next="${i+1}">Siguiente lección</button>`:`<button class="btn ghost" data-goquiz="1">Ir al quiz</button>`;
+  openSheet(`${i+1}. ${l.t}`,l.s,body,
+    `<button class="btn" data-mark="${i}">${d?"Ya la entendí ✓":"Marcar como entendida"}</button>${next}<button class="btn ghost" data-close="1">Cerrar</button>`);
+}
+
+$("#lessons").addEventListener("click",e=>{const b=e.target.closest(".lesson"); if(b) openLesson(+b.dataset.i);});
+$("#sh-actions").addEventListener("click",e=>{
+  const t=e.target.closest("button"); if(!t) return;
+  if(t.dataset.close) closeSheet();
+  if(t.dataset.mark!==undefined){const i=+t.dataset.mark; if(!state.done.includes(i)) state.done.push(i); save(); renderLessons(); progress(); t.textContent="Ya la entendí ✓";}
+  if(t.dataset.next) openLesson(+t.dataset.next);
+  if(t.dataset.goquiz){closeSheet(); show("quiz");}
+});
+
+function renderTree(){
+  $("#tree").innerHTML=TREE.map(r=>`<div class="gen"><div class="g">${r.g}<small>gen.</small></div><div class="people">${
+    r.p.map(([id,n,t])=>`<button class="chip ${t==="a"?"a":t==="j"?"j":""}" data-p="${id}">${esc(n)}</button>`).join("")}</div></div>`).join("");
+  $("#others").innerHTML=OTHERS.map((o,i)=>`<button class="chip x" data-o="${i}">${esc(o[0])}</button>`).join("");
+}
+$("#tree").addEventListener("click",e=>{
+  const c=e.target.closest(".chip"); if(!c) return;
+  const id=c.dataset.p, info=PEOPLE[id];
+  openSheet(c.textContent,info[0],`<p>${esc(info[1])}</p>`,`<button class="btn" data-close="1">Cerrar</button>`);
+});
+$("#others").addEventListener("click",e=>{
+  const c=e.target.closest(".chip"); if(!c) return;
+  const o=OTHERS[+c.dataset.o];
+  openSheet(o[0],"No es Buendía, pero vive cerca de la familia",`<p>${esc(o[1])}</p>`,`<button class="btn" data-close="1">Cerrar</button>`);
+});
+
+$("#pairs").innerHTML=PAIRS.map(p=>`<div class="pair"><div class="m"><h4>En el libro</h4><p>${esc(p[0])}</p></div><div><h4>En la vida real</h4><p>${esc(p[1])}</p></div></div>`).join("");
+
+/* Quiz */
+let qi=0, qs=0, answered=false;
+function renderQuiz(){
+  const box=$("#quiz");
+  if(qi>=QUIZ.length){
+    if(qs>state.best){state.best=qs; save(); progress();}
+    const msg=qs>=11?"Ya puedes explicarle el libro a otros.":qs>=8?"Muy bien. Repasa las que fallaste.":"Vuelve a las lecciones y lo intentas otra vez.";
+    box.innerHTML=`<div class="qcard"><div class="score">${qs}/${QUIZ.length}</div><h3>${msg}</h3><p>Mejor puntaje: ${state.best}/${QUIZ.length}</p><div class="row"><button class="btn" id="again">Hacer el quiz otra vez</button></div></div>`;
+    $("#again").onclick=()=>{qi=0;qs=0;renderQuiz();};
+    return;
+  }
+  const [q,opts,ok,ex]=QUIZ[qi]; answered=false;
+  box.innerHTML=`<div class="qcard"><div class="qtop"><span>Pregunta ${qi+1} de ${QUIZ.length}</span><span>Aciertos: ${qs}</span></div><h3>${esc(q)}</h3><div class="opts">${
+    opts.map((o,i)=>`<button class="opt" data-i="${i}">${esc(o)}</button>`).join("")}</div><div class="expl" id="expl" aria-live="polite"></div></div>`;
+  box.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+    if(answered) return; answered=true;
+    const i=+b.dataset.i, right=i===ok; if(right) qs++;
+    box.querySelectorAll(".opt").forEach((x,j)=>{ if(j===ok) x.classList.add("right"); else if(j===i) x.classList.add("wrong"); });
+    $("#expl").innerHTML=`<p><b>${right?"¡Eso es!":"Casi."}</b> ${esc(ex)}</p><button class="btn" id="nextq">${qi<QUIZ.length-1?"Siguiente":"Ver resultado"}</button>`;
+    $("#nextq").onclick=()=>{qi++;renderQuiz();};
+  });
+}
+
+/* Pestañas */
+function show(v){
+  document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on",s.id==="v-"+v));
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.v===v?"true":"false"));
+  window.scrollTo(0,0);
+}
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>show(t.dataset.v));
+
+renderLessons(); renderTree(); renderQuiz(); progress();
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));}
+</script>
+</body>
+</html>
